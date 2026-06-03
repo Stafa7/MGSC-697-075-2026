@@ -1,0 +1,64 @@
+# Eval Transcript
+
+- Case: `06_ambiguous_next_course`
+- Name: Ambiguous preference uses profile interests
+- Passed: `True`
+
+## User Request
+
+What should I take next?
+
+## Failures
+
+None
+
+## Structured Output
+
+```json
+{
+  "student_summary": "SAMPLE001 is in Master of Management in Analytics, has completed MGSC 601, MGSC 602, MGSC 603, and is currently taking MGSC 604.",
+  "recommended_courses": [
+    {
+      "course_code": "MGSC 604",
+      "course_name": "Database Systems for Analytics",
+      "credits": 3,
+      "recommendation": "recommend",
+      "reason": "Database Systems for Analytics fits the request and the fixture prerequisite check is satisfied.",
+      "prerequisite_status": "met",
+      "missing_prerequisites": [],
+      "policy_risks": []
+    },
+    {
+      "course_code": "MGSC 605",
+      "course_name": "Machine Learning Applications",
+      "credits": 3,
+      "recommendation": "recommend",
+      "reason": "Machine Learning Applications fits the request and the fixture prerequisite check is satisfied.",
+      "prerequisite_status": "met",
+      "missing_prerequisites": [],
+      "policy_risks": []
+    },
+    {
+      "course_code": "MGSC 609",
+      "course_name": "Responsible AI and Governance",
+      "credits": 3,
+      "recommendation": "recommend",
+      "reason": "Responsible AI and Governance fits the request and the fixture prerequisite check is satisfied.",
+      "prerequisite_status": "not_required",
+      "missing_prerequisites": [],
+      "policy_risks": []
+    }
+  ],
+  "total_recommended_credits": 9,
+  "advisor_approval_required": false,
+  "approval_reason": null,
+  "blocked": false,
+  "blocking_reason": null,
+  "policy_risks": [],
+  "next_steps": [
+    "Review the recommendation against the fake fixture assumptions before finalizing."
+  ],
+  "confidence": "high",
+  "fixture_scope_note": "This recommendation uses a small fake fixture catalog for an AI agents assignment. It is not official McGill advising."
+}
+```

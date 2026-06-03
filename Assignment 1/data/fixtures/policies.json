@@ -1,0 +1,31 @@
+{
+  "rules": [
+    {
+      "id": "missing_prerequisites_block",
+      "name": "MissingPrerequisiteBlocker",
+      "type": "blocking",
+      "description": "A course with unmet prerequisites cannot be recommended for enrollment."
+    },
+    {
+      "id": "max_credits",
+      "name": "Maximum next-term credits",
+      "type": "advisor_approval",
+      "max_credits_field": "max_credits_next_term",
+      "description": "Plans above the student's max next-term credits require advisor approval."
+    },
+    {
+      "id": "capstone_approval",
+      "name": "AdvisorApprovalRequired",
+      "type": "advisor_approval",
+      "course_codes": ["MGSC 610"],
+      "description": "The analytics capstone requires advisor approval."
+    },
+    {
+      "id": "exception_request",
+      "name": "Exception requests require advisor approval",
+      "type": "advisor_approval",
+      "description": "Requests for exceptions or overrides require human advisor review."
+    }
+  ]
+}
+

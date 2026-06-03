@@ -1,0 +1,12 @@
+{
+  "MGSC 601": [],
+  "MGSC 602": [],
+  "MGSC 603": [],
+  "MGSC 604": ["MGSC 603"],
+  "MGSC 605": ["MGSC 602", "MGSC 603"],
+  "MGSC 606": ["MGSC 601"],
+  "MGSC 607": [],
+  "MGSC 608": ["MGSC 604", "MGSC 605"],
+  "MGSC 609": [],
+  "MGSC 610": ["MGSC 601"]
+}

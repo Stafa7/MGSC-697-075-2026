@@ -1,0 +1,348 @@
+{
+  "trace_type": "offline_eval_trace",
+  "agent_name": "CourseAdvisingAgent",
+  "tool_count": 3,
+  "guardrail": "MissingPrerequisiteBlocker",
+  "escalation_rule": "AdvisorApprovalRequired",
+  "result_summary": {
+    "total_cases": 6,
+    "passed_cases": 6,
+    "failed_cases": 0,
+    "results": [
+      {
+        "id": "01_normal_ai_plan",
+        "name": "Normal AI engineering plan",
+        "passed": true,
+        "failures": [],
+        "output": {
+          "student_summary": "SAMPLE001 is in Master of Management in Analytics, has completed MGSC 601, MGSC 602, MGSC 603, and is currently taking MGSC 604.",
+          "recommended_courses": [
+            {
+              "course_code": "MGSC 604",
+              "course_name": "Database Systems for Analytics",
+              "credits": 3,
+              "recommendation": "recommend",
+              "reason": "Database Systems for Analytics fits the request and the fixture prerequisite check is satisfied.",
+              "prerequisite_status": "met",
+              "missing_prerequisites": [],
+              "policy_risks": []
+            },
+            {
+              "course_code": "MGSC 605",
+              "course_name": "Machine Learning Applications",
+              "credits": 3,
+              "recommendation": "recommend",
+              "reason": "Machine Learning Applications fits the request and the fixture prerequisite check is satisfied.",
+              "prerequisite_status": "met",
+              "missing_prerequisites": [],
+              "policy_risks": []
+            },
+            {
+              "course_code": "MGSC 609",
+              "course_name": "Responsible AI and Governance",
+              "credits": 3,
+              "recommendation": "recommend",
+              "reason": "Responsible AI and Governance fits the request and the fixture prerequisite check is satisfied.",
+              "prerequisite_status": "not_required",
+              "missing_prerequisites": [],
+              "policy_risks": []
+            }
+          ],
+          "total_recommended_credits": 9,
+          "advisor_approval_required": false,
+          "approval_reason": null,
+          "blocked": false,
+          "blocking_reason": null,
+          "policy_risks": [],
+          "next_steps": [
+            "Review the recommendation against the fake fixture assumptions before finalizing."
+          ],
+          "confidence": "high",
+          "fixture_scope_note": "This recommendation uses a small fake fixture catalog for an AI agents assignment. It is not official McGill advising."
+        }
+      },
+      {
+        "id": "02_missing_prerequisite",
+        "name": "Missing prerequisite blocked course",
+        "passed": true,
+        "failures": [],
+        "output": {
+          "student_summary": "SAMPLE001 is in Master of Management in Analytics, has completed MGSC 601, MGSC 602, MGSC 603, and is currently taking MGSC 604.",
+          "recommended_courses": [
+            {
+              "course_code": "MGSC 608",
+              "course_name": "AI Engineering Studio",
+              "credits": 3,
+              "recommendation": "do_not_take",
+              "reason": "Do not take MGSC 608 yet because prerequisites are missing: MGSC 605.",
+              "prerequisite_status": "missing",
+              "missing_prerequisites": [
+                "MGSC 605"
+              ],
+              "policy_risks": [
+                "MissingPrerequisiteBlocker"
+              ]
+            }
+          ],
+          "total_recommended_credits": 0,
+          "advisor_approval_required": false,
+          "approval_reason": null,
+          "blocked": true,
+          "blocking_reason": "MGSC 608 is missing prerequisites: MGSC 605.",
+          "policy_risks": [
+            {
+              "rule_id": "missing_prerequisites_block",
+              "name": "MissingPrerequisiteBlocker",
+              "severity": "blocking",
+              "message": "MGSC 608 is missing prerequisites: MGSC 605.",
+              "course_codes": [
+                "MGSC 608"
+              ]
+            }
+          ],
+          "next_steps": [
+            "Do not enroll in blocked courses until the listed issue is resolved."
+          ],
+          "confidence": "high",
+          "fixture_scope_note": "This recommendation uses a small fake fixture catalog for an AI agents assignment. It is not official McGill advising."
+        }
+      },
+      {
+        "id": "03_capstone_approval",
+        "name": "Capstone requires advisor approval",
+        "passed": true,
+        "failures": [],
+        "output": {
+          "student_summary": "SAMPLE001 is in Master of Management in Analytics, has completed MGSC 601, MGSC 602, MGSC 603, and is currently taking MGSC 604.",
+          "recommended_courses": [
+            {
+              "course_code": "MGSC 610",
+              "course_name": "Analytics Capstone Project",
+              "credits": 6,
+              "recommendation": "consider",
+              "reason": "This can be considered only with advisor approval because it is the capstone.",
+              "prerequisite_status": "met",
+              "missing_prerequisites": [],
+              "policy_risks": [
+                "AdvisorApprovalRequired"
+              ]
+            }
+          ],
+          "total_recommended_credits": 0,
+          "advisor_approval_required": true,
+          "approval_reason": "MGSC 610 Analytics Capstone Project requires advisor approval.",
+          "blocked": false,
+          "blocking_reason": null,
+          "policy_risks": [
+            {
+              "rule_id": "capstone_approval",
+              "name": "AdvisorApprovalRequired",
+              "severity": "approval_required",
+              "message": "MGSC 610 Analytics Capstone Project requires advisor approval.",
+              "course_codes": [
+                "MGSC 610"
+              ]
+            }
+          ],
+          "next_steps": [
+            "Contact a human advisor for approval before using the flagged plan."
+          ],
+          "confidence": "high",
+          "fixture_scope_note": "This recommendation uses a small fake fixture catalog for an AI agents assignment. It is not official McGill advising."
+        }
+      },
+      {
+        "id": "04_credit_overload",
+        "name": "Credit overload request",
+        "passed": true,
+        "failures": [],
+        "output": {
+          "student_summary": "SAMPLE001 is in Master of Management in Analytics, has completed MGSC 601, MGSC 602, MGSC 603, and is currently taking MGSC 604.",
+          "recommended_courses": [
+            {
+              "course_code": "MGSC 604",
+              "course_name": "Database Systems for Analytics",
+              "credits": 3,
+              "recommendation": "recommend",
+              "reason": "Database Systems for Analytics fits the request and the fixture prerequisite check is satisfied.",
+              "prerequisite_status": "met",
+              "missing_prerequisites": [],
+              "policy_risks": [
+                "Maximum next-term credits"
+              ]
+            },
+            {
+              "course_code": "MGSC 605",
+              "course_name": "Machine Learning Applications",
+              "credits": 3,
+              "recommendation": "recommend",
+              "reason": "Machine Learning Applications fits the request and the fixture prerequisite check is satisfied.",
+              "prerequisite_status": "met",
+              "missing_prerequisites": [],
+              "policy_risks": [
+                "Maximum next-term credits"
+              ]
+            },
+            {
+              "course_code": "MGSC 609",
+              "course_name": "Responsible AI and Governance",
+              "credits": 3,
+              "recommendation": "recommend",
+              "reason": "Responsible AI and Governance fits the request and the fixture prerequisite check is satisfied.",
+              "prerequisite_status": "not_required",
+              "missing_prerequisites": [],
+              "policy_risks": [
+                "Maximum next-term credits"
+              ]
+            },
+            {
+              "course_code": "MGSC 607",
+              "course_name": "Data Visualization and BI",
+              "credits": 3,
+              "recommendation": "recommend",
+              "reason": "Data Visualization and BI fits the request and the fixture prerequisite check is satisfied.",
+              "prerequisite_status": "not_required",
+              "missing_prerequisites": [],
+              "policy_risks": [
+                "Maximum next-term credits"
+              ]
+            },
+            {
+              "course_code": "MGSC 606",
+              "course_name": "Optimization and Decision Models",
+              "credits": 3,
+              "recommendation": "recommend",
+              "reason": "Optimization and Decision Models fits the request and the fixture prerequisite check is satisfied.",
+              "prerequisite_status": "met",
+              "missing_prerequisites": [],
+              "policy_risks": [
+                "Maximum next-term credits"
+              ]
+            }
+          ],
+          "total_recommended_credits": 15,
+          "advisor_approval_required": true,
+          "approval_reason": "Proposed plan has 15 credits, above the 9-credit limit.",
+          "blocked": false,
+          "blocking_reason": null,
+          "policy_risks": [
+            {
+              "rule_id": "max_credits",
+              "name": "Maximum next-term credits",
+              "severity": "approval_required",
+              "message": "Proposed plan has 15 credits, above the 9-credit limit.",
+              "course_codes": [
+                "MGSC 604",
+                "MGSC 605",
+                "MGSC 609",
+                "MGSC 607",
+                "MGSC 606"
+              ]
+            }
+          ],
+          "next_steps": [
+            "Contact a human advisor for approval before using the flagged plan."
+          ],
+          "confidence": "high",
+          "fixture_scope_note": "This recommendation uses a small fake fixture catalog for an AI agents assignment. It is not official McGill advising."
+        }
+      },
+      {
+        "id": "05_unknown_course",
+        "name": "Unknown course safe failure",
+        "passed": true,
+        "failures": [],
+        "output": {
+          "student_summary": "SAMPLE001 is in Master of Management in Analytics, has completed MGSC 601, MGSC 602, MGSC 603, and is currently taking MGSC 604.",
+          "recommended_courses": [
+            {
+              "course_code": "MGSC 999",
+              "course_name": "Unknown fixture course",
+              "credits": 0,
+              "recommendation": "do_not_take",
+              "reason": "MGSC 999 is not in the fake fixture catalog, so the agent cannot evaluate it.",
+              "prerequisite_status": "missing",
+              "missing_prerequisites": [],
+              "policy_risks": [
+                "Unknown course code"
+              ]
+            }
+          ],
+          "total_recommended_credits": 0,
+          "advisor_approval_required": false,
+          "approval_reason": null,
+          "blocked": true,
+          "blocking_reason": "MGSC 999 is not in the fake fixture catalog.",
+          "policy_risks": [
+            {
+              "rule_id": "unknown_course",
+              "name": "Unknown course code",
+              "severity": "blocking",
+              "message": "MGSC 999 is not in the fake fixture catalog.",
+              "course_codes": [
+                "MGSC 999"
+              ]
+            }
+          ],
+          "next_steps": [
+            "Do not enroll in blocked courses until the listed issue is resolved."
+          ],
+          "confidence": "high",
+          "fixture_scope_note": "This recommendation uses a small fake fixture catalog for an AI agents assignment. It is not official McGill advising."
+        }
+      },
+      {
+        "id": "06_ambiguous_next_course",
+        "name": "Ambiguous preference uses profile interests",
+        "passed": true,
+        "failures": [],
+        "output": {
+          "student_summary": "SAMPLE001 is in Master of Management in Analytics, has completed MGSC 601, MGSC 602, MGSC 603, and is currently taking MGSC 604.",
+          "recommended_courses": [
+            {
+              "course_code": "MGSC 604",
+              "course_name": "Database Systems for Analytics",
+              "credits": 3,
+              "recommendation": "recommend",
+              "reason": "Database Systems for Analytics fits the request and the fixture prerequisite check is satisfied.",
+              "prerequisite_status": "met",
+              "missing_prerequisites": [],
+              "policy_risks": []
+            },
+            {
+              "course_code": "MGSC 605",
+              "course_name": "Machine Learning Applications",
+              "credits": 3,
+              "recommendation": "recommend",
+              "reason": "Machine Learning Applications fits the request and the fixture prerequisite check is satisfied.",
+              "prerequisite_status": "met",
+              "missing_prerequisites": [],
+              "policy_risks": []
+            },
+            {
+              "course_code": "MGSC 609",
+              "course_name": "Responsible AI and Governance",
+              "credits": 3,
+              "recommendation": "recommend",
+              "reason": "Responsible AI and Governance fits the request and the fixture prerequisite check is satisfied.",
+              "prerequisite_status": "not_required",
+              "missing_prerequisites": [],
+              "policy_risks": []
+            }
+          ],
+          "total_recommended_credits": 9,
+          "advisor_approval_required": false,
+          "approval_reason": null,
+          "blocked": false,
+          "blocking_reason": null,
+          "policy_risks": [],
+          "next_steps": [
+            "Review the recommendation against the fake fixture assumptions before finalizing."
+          ],
+          "confidence": "high",
+          "fixture_scope_note": "This recommendation uses a small fake fixture catalog for an AI agents assignment. It is not official McGill advising."
+        }
+      }
+    ]
+  }
+}

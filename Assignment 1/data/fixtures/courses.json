@@ -1,0 +1,93 @@
+[
+  {
+    "code": "MGSC 601",
+    "name": "Data Analytics Foundations",
+    "credits": 3,
+    "area": "analytics",
+    "difficulty": "intro",
+    "description": "A first course in analytics concepts, decision framing, and basic data workflows.",
+    "keywords": ["analytics", "foundations", "intro", "decision"]
+  },
+  {
+    "code": "MGSC 602",
+    "name": "Statistics for Decision Making",
+    "credits": 3,
+    "area": "statistics",
+    "difficulty": "intro",
+    "description": "Probability, inference, regression, and uncertainty for management decisions.",
+    "keywords": ["statistics", "regression", "probability", "decision"]
+  },
+  {
+    "code": "MGSC 603",
+    "name": "Python for Analytics",
+    "credits": 3,
+    "area": "programming",
+    "difficulty": "intro",
+    "description": "Python programming for analytics, data cleaning, and reproducible analysis.",
+    "keywords": ["python", "programming", "analytics", "data"]
+  },
+  {
+    "code": "MGSC 604",
+    "name": "Database Systems for Analytics",
+    "credits": 3,
+    "area": "data engineering",
+    "difficulty": "intermediate",
+    "description": "Relational databases, SQL, data modeling, and analytics data pipelines.",
+    "keywords": ["database", "sql", "data engineering", "pipeline"]
+  },
+  {
+    "code": "MGSC 605",
+    "name": "Machine Learning Applications",
+    "credits": 3,
+    "area": "machine learning",
+    "difficulty": "intermediate",
+    "description": "Applied machine learning models, evaluation, and management use cases.",
+    "keywords": ["machine learning", "ml", "modeling", "prediction"]
+  },
+  {
+    "code": "MGSC 606",
+    "name": "Optimization and Decision Models",
+    "credits": 3,
+    "area": "operations",
+    "difficulty": "intermediate",
+    "description": "Optimization models and decision support for operations and analytics.",
+    "keywords": ["optimization", "operations", "decision", "models"]
+  },
+  {
+    "code": "MGSC 607",
+    "name": "Data Visualization and BI",
+    "credits": 3,
+    "area": "visualization",
+    "difficulty": "intro",
+    "description": "Dashboards, visual storytelling, and business intelligence workflows.",
+    "keywords": ["visualization", "bi", "dashboard", "business intelligence"]
+  },
+  {
+    "code": "MGSC 608",
+    "name": "AI Engineering Studio",
+    "credits": 3,
+    "area": "AI engineering",
+    "difficulty": "advanced",
+    "description": "Build and evaluate AI-enabled analytics systems with deployment-oriented practices.",
+    "keywords": ["ai", "AI engineering", "studio", "deployment", "agents"]
+  },
+  {
+    "code": "MGSC 609",
+    "name": "Responsible AI and Governance",
+    "credits": 3,
+    "area": "governance",
+    "difficulty": "intermediate",
+    "description": "Risk, accountability, governance, and responsible deployment of AI systems.",
+    "keywords": ["responsible ai", "governance", "risk", "policy"]
+  },
+  {
+    "code": "MGSC 610",
+    "name": "Analytics Capstone Project",
+    "credits": 6,
+    "area": "capstone",
+    "difficulty": "advanced",
+    "description": "A supervised capstone project integrating analytics, communication, and implementation.",
+    "keywords": ["capstone", "project", "advisor approval", "advanced"]
+  }
+]
+

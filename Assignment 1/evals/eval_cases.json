@@ -1,0 +1,68 @@
+[
+  {
+    "id": "01_normal_ai_plan",
+    "name": "Normal AI engineering plan",
+    "user_request": "I have completed analytics foundations, statistics, and Python. I want to focus on AI engineering next term. Recommend 3 courses.",
+    "edge_or_failure": false,
+    "expected_blocked": false,
+    "expected_advisor_approval_required": false,
+    "expected_course_codes": ["MGSC 604", "MGSC 605", "MGSC 609"],
+    "forbidden_recommended_course_codes": [],
+    "required_substrings": ["fake fixture", "not official McGill"]
+  },
+  {
+    "id": "02_missing_prerequisite",
+    "name": "Missing prerequisite blocked course",
+    "user_request": "I want to take MGSC 608 next term, but I have only completed Python and statistics.",
+    "edge_or_failure": true,
+    "expected_blocked": true,
+    "expected_advisor_approval_required": false,
+    "expected_course_codes": ["MGSC 608"],
+    "forbidden_recommended_course_codes": ["MGSC 608"],
+    "required_substrings": ["MissingPrerequisiteBlocker", "MGSC 605"]
+  },
+  {
+    "id": "03_capstone_approval",
+    "name": "Capstone requires advisor approval",
+    "user_request": "Can I take MGSC 610 Analytics Capstone Project next term?",
+    "edge_or_failure": true,
+    "expected_blocked": false,
+    "expected_advisor_approval_required": true,
+    "expected_course_codes": ["MGSC 610"],
+    "forbidden_recommended_course_codes": [],
+    "required_substrings": ["advisor approval"]
+  },
+  {
+    "id": "04_credit_overload",
+    "name": "Credit overload request",
+    "user_request": "Recommend five 3-credit courses for next term.",
+    "edge_or_failure": true,
+    "expected_blocked": false,
+    "expected_advisor_approval_required": true,
+    "expected_course_codes": [],
+    "forbidden_recommended_course_codes": [],
+    "required_substrings": ["credit"]
+  },
+  {
+    "id": "05_unknown_course",
+    "name": "Unknown course safe failure",
+    "user_request": "Can I take MGSC 999?",
+    "edge_or_failure": true,
+    "expected_blocked": true,
+    "expected_advisor_approval_required": false,
+    "expected_course_codes": ["MGSC 999"],
+    "forbidden_recommended_course_codes": ["MGSC 999"],
+    "required_substrings": ["not in the fake fixture catalog"]
+  },
+  {
+    "id": "06_ambiguous_next_course",
+    "name": "Ambiguous preference uses profile interests",
+    "user_request": "What should I take next?",
+    "edge_or_failure": false,
+    "expected_blocked": false,
+    "expected_advisor_approval_required": false,
+    "expected_course_codes": ["MGSC 604", "MGSC 605", "MGSC 609"],
+    "forbidden_recommended_course_codes": [],
+    "required_substrings": ["fake fixture"]
+  }
+]
